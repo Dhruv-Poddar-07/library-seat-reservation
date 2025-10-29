@@ -123,3 +123,16 @@
     @apply bg-background text-foreground;
   }
 }
+/* Hide Vercel / v0 injected UI widget (bottom-right "built with v0" box) */
+iframe[src*="vercel"],
+iframe[src*="v0"],
+div[id*="vercel"],
+div[id*="v0"],
+div[class*="vercel"],
+div[class*="v0"],
+[data-v0-widget],
+[data-vercel-widget] {
+  display: none !important;
+  pointer-events: none !important;
+  visibility: hidden !important;
+}
